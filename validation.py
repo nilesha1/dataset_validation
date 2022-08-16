@@ -33,9 +33,9 @@ dup_df2_records = df2[df2.duplicated()]
 dup_df2_records.to_excel("C:\\Users\\Nilesh\\Documents\\Output2.xls", index=False)
 
 if dup_df2 > 0:
-   print("2) Test Case Fail: Duplicate records are found in target table")
+   print("2. Test Case Fail: Duplicate records are found in target table")
 else:
-    print("2) Test Case Pass: Duplicate records are not found in target table")
+    print("2. Test Case Pass: Duplicate records are not found in target table")
 
 
 
