@@ -6,4 +6,4 @@
 #pip install xlwt
 
 2. Input excel files: Source.xls & Target.xls 
-3. Output: Output1.xls(count validations), Output2.xls(duplicate data), Output3.xls(data_validation) 
+3. Output: Count_Validation.xls, Duplicate_Validation.xls, Data_Validation.xls
