@@ -24,13 +24,13 @@ count_df=pd.DataFrame({
     "Target_Count":count_df2,
     "Status": status}, index=[0])
 
-count_df.to_excel(r"C:\\Users\\Nilesh\\Documents\\Output1.xls")
+count_df.to_excel("C:\\Users\\Nilesh\\Documents\\Count_Validation.xls")
 
 
 #2.Duplicate validation
 dup_df2= df2.duplicated().sum()
 dup_df2_records = df2[df2.duplicated()]
-dup_df2_records.to_excel("C:\\Users\\Nilesh\\Documents\\Output2.xls", index=False)
+dup_df2_records.to_excel("C:\\Users\\Nilesh\\Documents\\Duplicate_Validation.xls", index=False)
 
 if dup_df2 > 0:
    print("2. Test Case Fail: Duplicate records are found in target table")
@@ -50,7 +50,7 @@ rows, cols = np.where(comparevalues==False)
 for item in zip(rows,cols):
 	df1.iloc[item[0],item[1]] ='{}---->{}'.format(df1.iloc[item[0],item[1]], df2.iloc[item[0],item[1]])
 
-df1.to_excel("C:\\Users\\Nilesh\\Documents\\Output3.xls", index= False, header= True)
+df1.to_excel("C:\\Users\\Nilesh\\Documents\\Data_Validation.xls", index= False, header= True)
 
 
 
